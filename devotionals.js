@@ -1,5 +1,5 @@
-const SHEET_ID = "https://docs.google.com/spreadsheets/d/e/2PACX-1vRDi1eRzfIiwQQCxWbUkBIyzMRJQ-4uLgshX38dZQz4wYMzfByIiFDIJN7CFkgVGSmKLDymdg9D7qPY/pubhtml";
-const SHEET_NAME = "Sheet1";
+const SHEET_ID = "1kEea5XwYqU7b0yEi1baFIibBOkb1MCJbNg2PM3qGo6g";
+const SHEET_NAME = "Devotionals";
 const URL = `https://opensheet.elk.sh/${SHEET_ID}/${SHEET_NAME}`;
 const card = document.querySelector(".devotional-card");
 card.innerHTML = `
@@ -161,3 +161,16 @@ function showToast(message) {
     setTimeout(() => toast.remove(), 300);
   }, 2500);
 }
+
+const card = document.querySelector(".devotional-card"); // this must exist
+card.innerHTML = `
+  <h2 id="devotional-title"></h2>
+  <div class="scripture" id="devotional-scripture"></div>
+  <p id="devotional-body"></p>
+  <div id="devotional-author" class="author"></div>
+  <div class="devotional-actions">
+    <button onclick="shareOnWhatsApp()" class="btn primary">Share on WhatsApp</button>
+    <button onclick="copyScripture()" class="btn secondary">Copy Scripture</button>
+  </div>
+`;
+
