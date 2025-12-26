@@ -141,36 +141,46 @@
   </section>
 
   <!-- ================= JOIN THE MINISTRY ================= -->
-  <section class="section deep">
-    <div class="container center stagger">
+<section class="section deep">
+  <div class="container center stagger">
 
-      <h2>Join the Ministry</h2>
+    <h2>Join the Ministry</h2>
 
-      <p style="max-width:600px;margin:1.5rem auto;">
-        Ministry grows through connection.
-        Whether you are a listener, artist, or prayer partner,
-        there is a place for you in what God is building through TMC.
-      </p>
+    <p style="max-width:600px;margin:1.5rem auto;">
+      Ministry grows through connection.
+      Whether you are a listener, artist, or prayer partner,
+      there is a place for you in what God is building through TMC.
+    </p>
 
-      <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-top:2rem;">
-        <button class="btn primary"
-          onclick="openWhatsApp('Hello TMC Ministry, I would like to join as a Listener.')">
-          Join as Listener
-        </button>
+    <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-top:2rem;">
+      <button class="btn primary"
+        onclick="openWhatsApp('Hello TMC Ministry, I would like to join as a Listener.')">
+        Join as Listener
+      </button>
 
-        <button class="btn"
-          onclick="openWhatsApp('Hello TMC Ministry, I would like to join as an Artist.')">
-          Join as Artist
-        </button>
+      <button class="btn"
+        onclick="openWhatsApp('Hello TMC Ministry, I would like to join as an Artist.')">
+        Join as Artist
+      </button>
 
-        <button class="btn"
-          onclick="openWhatsApp('Hello TMC Ministry, I would like to join as a Prayer Partner.')">
-          Prayer Partner
-        </button>
-      </div>
-
+      <button class="btn"
+        onclick="openWhatsApp('Hello TMC Ministry, I would like to join as a Prayer Partner.')">
+        Prayer Partner
+      </button>
     </div>
-  </section>
+
+  </div>
+</section>
+
+<script>
+  const TMC_NUMBER = "256774313810"; // TMC WhatsApp number in international format
+
+  function openWhatsApp(message) {
+    const url = `https://wa.me/${TMC_NUMBER}?text=${encodeURIComponent(message)}`;
+    window.open(url, "_blank");
+  }
+</script>
+
 
   <!-- ================= FOOTER ================= -->
 <footer>
@@ -222,4 +232,5 @@
 
 </body>
 </html>
+
 
