@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TMC | The Messianic Content</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Shared Styles -->
+  <link rel="stylesheet" href="shared.css">
+
+  <!-- Page Styles -->
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+
+  <!-- ================= HEADER / NAV ================= -->
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <img src="logo.png" alt="TMC Logo" height="40">
+      </div>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="music.html">Music</a>
+        <a href="videos.html">Videos</a>
+        <a href="devotionals.html">Devotionals</a>
+        <a href="about.html">About</a>
+        <a href="join.html">Join</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ================= HERO SECTION ================= -->
+  <section class="section deep hero">
+    <div class="container center stagger">
+
+      <h1>
+        Raising Christ Through
+        <span class="gold-text">Sound & Media</span>
+      </h1>
+
+      <p style="max-width: 700px; margin: 1.5rem auto;">
+        The Messianic Content (TMC) is a music and media ministry dedicated
+        to spreading the Gospel of Jesus Christ through worship,
+        gospel hip-hop, devotionals, and inspired visual storytelling.
+      </p>
+
+      <div style="margin-top: 2rem;">
+        <a href="music.html" class="btn primary">Listen to Music</a>
+        <a href="devotionals.html" class="btn">Today’s Devotional</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= MUSIC PREVIEW ================= -->
+  <section class="section">
+    <div class="container">
+
+      <h2 class="center">Music Ministry</h2>
+      <p class="center" style="max-width: 600px; margin: 1rem auto 3rem;">
+        Sound that ministers to the soul — worship, gospel rap,
+        and instrumental reflections crafted to glorify God.
+      </p>
+
+      <div class="stagger" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;">
+
+        <div class="music-card">
+          <h4>Worship & Praise</h4>
+          <p>Spirit-led worship songs that draw hearts into God’s presence.</p>
+        </div>
+
+        <div class="music-card">
+          <h4>Gospel Rap</h4>
+          <p>Urban gospel with truth, testimony, and bold faith.</p>
+        </div>
+
+        <div class="music-card">
+          <h4>Instrumentals</h4>
+          <p>Background sounds for prayer, meditation, and devotion.</p>
+        </div>
+
+      </div>
+
+      <div class="center" style="margin-top:2.5rem;">
+        <a href="music.html" class="btn primary">Explore Music</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= TODAY'S DEVOTIONAL ================= -->
+  <section class="section deep">
+    <div class="container stagger">
+
+      <h2 class="center">Today’s Devotional</h2>
+
+      <div style="max-width:800px;margin:2rem auto;">
+        <div class="scripture">
+          “Your word is a lamp to my feet and a light to my path.”
+          <br><strong>— Psalm 119:105</strong>
+        </div>
+
+        <p>
+          In a world full of noise and uncertainty, God’s Word remains
+          our true compass. When we align our steps with His truth,
+          clarity replaces confusion and peace overcomes fear.
+          Take a moment today to slow down, listen, and let His Word
+          guide your decisions.
+        </p>
+
+        <div style="margin-top:1.5rem;">
+          <a href="devotionals.html" class="btn primary">
+            Read Full Devotional
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= VIDEO PREVIEW ================= -->
+  <section class="section">
+    <div class="container">
+
+      <h2 class="center">Visual Ministry</h2>
+      <p class="center" style="max-width:600px;margin:1rem auto 3rem;">
+        Worship sessions, music videos, spoken word,
+        and devotional visuals that bring the message to life.
+      </p>
+
+      <div class="stagger" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1.5rem;">
+        <div class="video-card">
+          <h4>Live Worship Sessions</h4>
+        </div>
+        <div class="video-card">
+          <h4>Music Videos</h4>
+        </div>
+        <div class="video-card">
+          <h4>Spoken Word & Devotionals</h4>
+        </div>
+      </div>
+
+      <div class="center" style="margin-top:2.5rem;">
+        <a href="videos.html" class="btn">Watch Videos</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= JOIN THE MINISTRY ================= -->
+  <section class="section deep">
+    <div class="container center stagger">
+
+      <h2>Join the Ministry</h2>
+
+      <p style="max-width:600px;margin:1.5rem auto;">
+        Ministry grows through connection.
+        Whether you are a listener, artist, or prayer partner,
+        there is a place for you in what God is building through TMC.
+      </p>
+
+      <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-top:2rem;">
+        <button class="btn primary"
+          onclick="openWhatsApp('Hello TMC Ministry, I would like to join as a Listener.')">
+          Join as Listener
+        </button>
+
+        <button class="btn"
+          onclick="openWhatsApp('Hello TMC Ministry, I would like to join as an Artist.')">
+          Join as Artist
+        </button>
+
+        <button class="btn"
+          onclick="openWhatsApp('Hello TMC Ministry, I would like to join as a Prayer Partner.')">
+          Prayer Partner
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================= FOOTER ================= -->
+<footer>
+  <div class="footer-container">
+
+    <!-- Logo & Description -->
+    <div class="footer-brand">
+      <div class="logo">TMC</div>
+      <p>Inspiring worship, devotionals, and creative faith content for believers everywhere.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="devotionals.html">Devotionals</a>
+      <a href="music.html">Music</a>
+      <a href="videos.html">Videos</a>
+      <a href="about.html">About</a>
+      <a href="join.html">Join</a>
+    </div>
+
+    <!-- Contact & Socials -->
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <a href="https://wa.me/+256774313810" target="_blank">WhatsApp</a>
+      <a href="mailto:YOUR_EMAIL@example.com">Email</a>
+      <div class="socials">
+        <a href="https://www.facebook.com/YOUR_PAGE" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/YOUR_PAGE" target="_blank">Instagram</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Copyright -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 TMC. All Rights Reserved.</p>
+  </div>
+</footer>
+
+
+  <!-- ================= SCRIPTS ================= -->
+  <script src="shared.js"></script>
+  <script src="index.js"></script>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>

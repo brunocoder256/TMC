@@ -1,0 +1,130 @@
+/* HERO SECTION */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, #001f3f, #0a2f6f);
+  color: gold;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* FEATURED VIDEO */
+.featured-video {
+  display: flex;
+  justify-content: center;
+  margin: 2rem auto;
+  max-width: 900px;
+}
+
+.featured-video iframe {
+  width: 100%;
+  height: 500px;
+  border-radius: 15px;
+  border: none;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+/* VIDEO GALLERY GRID */
+.video-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+}
+
+.video-card {
+  background: linear-gradient(135deg, #001f3f, #0a2f6f);
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.video-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 30px rgba(255, 215, 0, 0.6);
+}
+
+.video-card iframe {
+  width: 100%;
+  height: 200px;
+  border: none;
+  border-radius: 12px;
+}
+
+.video-card .video-info {
+  padding: 0.5rem 1rem;
+  text-align: center;
+  color: gold;
+}
+
+.video-card .video-info h4 {
+  margin: 0.3rem 0;
+  font-size: 1rem;
+}
+
+.video-card .video-info p {
+  font-size: 0.85rem;
+}
+
+/* CTA SECTION */
+.cta {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(135deg, #001f3f, #0a2f6f);
+  color: gold;
+}
+
+.cta p {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.cta .btn {
+  display: inline-block;
+  margin: 0.5rem;
+  padding: 0.8rem 1.8rem;
+  border-radius: 25px;
+  background: linear-gradient(135deg, gold, #ffd700);
+  color: #001f3f;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.cta .btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.6);
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 768px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .featured-video iframe {
+    height: 250px;
+  }
+
+  .video-card iframe {
+    height: 180px;
+  }
+
+  .video-gallery {
+    padding: 1rem;
+    gap: 1rem;
+  }
+}

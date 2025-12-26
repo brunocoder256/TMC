@@ -1,0 +1,200 @@
+/* ===============================
+   DEVOTIONAL PAGE STYLES
+   =============================== */
+
+.devotional-hero {
+  padding-top: 160px;
+  text-align: center;
+  background:
+    radial-gradient(circle at center, rgba(212,175,55,0.08), transparent 60%);
+}
+
+/* ===============================
+   FEATURED DEVOTIONAL
+   =============================== */
+
+.devotional-card {
+  background: linear-gradient(
+    180deg,
+    rgba(11,28,63,0.9),
+    rgba(5,11,26,0.95)
+  );
+  border-left: 5px solid var(--gold);
+  border-radius: 18px;
+  padding: 40px;
+  box-shadow: 0 0 40px rgba(0,0,0,0.6);
+}
+
+.devotional-card.featured {
+  position: relative;
+}
+
+.devotional-date {
+  color: var(--gold-light);
+  font-size: 0.9rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.devotional-title {
+  font-size: 2rem;
+  margin: 15px 0 20px;
+  color: var(--text-light);
+}
+
+.devotional-scripture {
+  font-style: italic;
+  color: var(--gold-light);
+  margin: 25px 0;
+  padding-left: 20px;
+  border-left: 3px solid rgba(212,175,55,0.5);
+}
+
+.devotional-scripture span {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.devotional-body {
+  font-size: 1.05rem;
+  color: var(--text-light);
+  margin: 30px 0;
+  line-height: 1.9;
+}
+
+/* ===============================
+   FOOTER ACTIONS
+   =============================== */
+
+.devotional-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.author {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.devotional-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.action-btn {
+  background: transparent;
+  border: 1px solid rgba(212,175,55,0.4);
+  color: var(--gold-light);
+  padding: 8px 14px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.action-btn:hover {
+  background: rgba(212,175,55,0.15);
+}
+
+/* ===============================
+   PREVIOUS DEVOTIONALS
+   =============================== */
+
+.previous-devotionals {
+  background: rgba(255,255,255,0.02);
+}
+
+.devotional-list {
+  display: grid;
+  gap: 18px;
+  margin-top: 40px;
+}
+
+.devotional-item {
+  padding: 20px;
+  border-radius: 14px;
+  background: rgba(11,28,63,0.6);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.devotional-item:hover {
+  transform: translateX(6px);
+  background: rgba(11,28,63,0.9);
+}
+
+.devotional-item h4 {
+  margin-bottom: 6px;
+  color: var(--text-light);
+}
+
+.devotional-item span {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+/* ===============================
+   RESPONSIVE
+   =============================== */
+
+@media (max-width: 768px) {
+  .devotional-card {
+    padding: 28px;
+  }
+
+  .devotional-footer {
+    gap: 20px;
+  }
+}
+
+/* ===============================
+   TOAST MESSAGE
+   =============================== */
+
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: rgba(212,175,55,0.95);
+  color: #000;
+  padding: 12px 22px;
+  border-radius: 30px;
+  font-size: 0.9rem;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 3000;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ===============================
+   LOADING SKELETON
+   =============================== */
+
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    rgba(255,255,255,0.05),
+    rgba(255,255,255,0.12),
+    rgba(255,255,255,0.05)
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite;
+  border-radius: 8px;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.skel-title { height: 28px; width: 60%; margin-bottom: 20px; }
+.skel-text { height: 14px; width: 100%; margin-bottom: 12px; }
+.skel-text.short { width: 70%; }

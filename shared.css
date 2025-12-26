@@ -1,0 +1,274 @@
+/* =========================================================
+   TMC – SHARED GLOBAL STYLES
+   Identity • Layout • Animations • Navigation • UI
+   ========================================================= */
+
+/* -------------------------
+   1. CSS RESET & BASE
+-------------------------- */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', 'Montserrat', system-ui, sans-serif;
+  background: var(--bg-main);
+  color: var(--text-primary);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+/* -------------------------
+   2. COLOR SYSTEM (VARIABLES)
+-------------------------- */
+:root {
+  /* Core backgrounds */
+  --bg-main: linear-gradient(180deg, #050b1a 0%, #020611 100%);
+  --bg-section: linear-gradient(180deg, #07122a 0%, #030815 100%);
+  --bg-deep: linear-gradient(180deg, #020611 0%, #00030a 100%);
+
+  /* Accent gradients */
+  --gold-gradient: linear-gradient(
+    135deg,
+    #d4af37 0%,
+    #f5e27a 50%,
+    #c9a227 100%
+  );
+
+  --blue-glow: radial-gradient(
+    circle at top,
+    rgba(70, 120, 255, 0.15),
+    transparent 60%
+  );
+
+  /* Text */
+  --text-primary: #f5f7fa;
+  --text-secondary: #b8c0cc;
+  --text-muted: #8a93a3;
+
+  /* Accents */
+  --gold: #d4af37;
+  --blue-accent: #4a6cff;
+
+  /* UI */
+  --border-soft: rgba(255, 255, 255, 0.08);
+  --blur-bg: rgba(5, 11, 26, 0.75);
+}
+
+/* -------------------------
+   3. GLOBAL TYPOGRAPHY
+-------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+  color: var(--text-primary);
+}
+
+h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+h2 { font-size: clamp(2rem, 4vw, 3rem); }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.3rem; }
+
+p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+}
+
+/* Scripture styling */
+.scripture {
+  margin: 1.5rem 0;
+  padding-left: 1.2rem;
+  border-left: 3px solid var(--gold);
+  color: var(--text-primary);
+  font-style: italic;
+}
+
+/* -------------------------
+   4. LAYOUT UTILITIES
+-------------------------- */
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 1.2rem;
+}
+
+.section {
+  padding: 4.5rem 0;
+  background: var(--bg-section);
+  position: relative;
+}
+
+.section.deep {
+  background: var(--bg-deep);
+}
+
+.section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--blue-glow);
+  pointer-events: none;
+}
+
+/* -------------------------
+   5. BUTTON SYSTEM
+-------------------------- */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.6rem;
+  border-radius: 50px;
+  border: 1px solid var(--border-soft);
+  background: transparent;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn.primary {
+  border-color: var(--gold);
+  background: linear-gradient(
+    135deg,
+    rgba(212, 175, 55, 0.15),
+    rgba(212, 175, 55, 0.05)
+  );
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 20px rgba(212, 175, 55, 0.25);
+}
+
+/* -------------------------
+   6. NAVIGATION (SHARED)
+-------------------------- */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  background: var(--blur-bg);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.nav a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  margin-left: 1.2rem;
+  position: relative;
+}
+
+.nav a.active,
+.nav a:hover {
+  color: var(--text-primary);
+}
+
+.nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--gold-gradient);
+  transition: width 0.3s ease;
+}
+
+.nav a:hover::after,
+.nav a.active::after {
+  width: 100%;
+}
+
+/* -------------------------
+   7. FOOTER
+-------------------------- */
+footer {
+  background: var(--bg-deep);
+  padding: 3rem 0;
+  border-top: 1px solid var(--border-soft);
+}
+
+footer p {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+/* -------------------------
+   8. ANIMATIONS (SUBTLE)
+-------------------------- */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stagger > * {
+  opacity: 0;
+  transform: translateY(15px);
+}
+
+.stagger.loaded > * {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+.stagger.loaded > *:nth-child(2) { animation-delay: 0.1s; }
+.stagger.loaded > *:nth-child(3) { animation-delay: 0.2s; }
+.stagger.loaded > *:nth-child(4) { animation-delay: 0.3s; }
+
+/* -------------------------
+   9. PAGE TRANSITION
+-------------------------- */
+.page {
+  animation: pageEnter 0.6s ease;
+}
+
+@keyframes pageEnter {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* -------------------------
+   10. MISC UTILITIES
+-------------------------- */
+.gold-text {
+  background: var(--gold-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.center {
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}

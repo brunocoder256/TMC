@@ -1,0 +1,121 @@
+/* ===============================
+   MUSIC PAGE STYLES
+=============================== */
+
+.music-hero {
+  padding-top: 160px;
+  text-align: center;
+  background: radial-gradient(circle at center, rgba(212,175,55,0.08), transparent 60%);
+}
+
+/* ===============================
+   FEATURED AUDIO CARD
+=============================== */
+
+.audio-card {
+  background: linear-gradient(180deg, rgba(11,28,63,0.9), rgba(5,11,26,0.95));
+  border-left: 5px solid var(--gold);
+  border-radius: 18px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 40px rgba(0,0,0,0.6);
+  margin-bottom: 40px;
+}
+
+.audio-card img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.audio-card h2 {
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+.audio-card p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.audio-card audio {
+  width: 100%;
+  margin-top: 10px;
+  outline: none;
+}
+
+/* ===============================
+   MUSIC GALLERY GRID
+=============================== */
+
+.music-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 18px;
+  margin-top: 30px;
+}
+
+.music-item {
+  background: rgba(11,28,63,0.6);
+  border-radius: 14px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.music-item:hover {
+  transform: translateY(-5px);
+  background: rgba(11,28,63,0.9);
+}
+
+.music-item img {
+  width: 100%;
+  display: block;
+}
+
+.music-item h4 {
+  color: var(--text-light);
+  margin: 10px 12px 4px;
+}
+
+.music-item span {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-left: 12px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+/* ===============================
+   SKELETON CARD
+=============================== */
+
+.skeleton-card, .skeleton {
+  background: linear-gradient(90deg, rgba(255,255,255,0.05), rgba(255,255,255,0.12), rgba(255,255,255,0.05));
+  background-size: 200% 100%;
+  animation: shimmer 1.2s infinite;
+  border-radius: 8px;
+}
+
+.skel-img { height: 180px; width: 100%; margin-bottom: 15px; }
+.skel-title { height: 22px; width: 60%; margin: 8px auto; }
+.skel-text { height: 14px; width: 80%; margin: 6px auto; }
+.skel-text.short { width: 50%; }
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* ===============================
+   RESPONSIVE
+=============================== */
+
+@media (max-width: 768px) {
+  .audio-card { padding: 20px; }
+}

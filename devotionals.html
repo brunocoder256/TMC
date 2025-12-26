@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>TMC | Daily Devotional</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Shared Styles -->
+  <link rel="stylesheet" href="shared.css">
+  <!-- Devotional Page Styles -->
+  <link rel="stylesheet" href="devotional.css">
+  <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+
+<!-- LOADER -->
+<div id="loader">
+  <div class="loader-ring"></div>
+</div>
+
+<!-- NAVBAR -->
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <img src="logo.png" alt="TMC Logo" height="40">
+      </div>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="music.html">Music</a>
+        <a href="videos.html">Videos</a>
+        <a href="devotionals.html">Devotionals</a>
+        <a href="about.html">About</a>
+        <a href="join.html">Join</a>
+      </nav>
+    </div>
+  </header>
+
+<!-- HERO -->
+<section class="devotional-hero section">
+  <div class="container fade-up">
+    <h1 class="section-title">Daily Devotional</h1>
+    <p class="section-subtitle">
+      Fresh Word. Quiet Strength. A moment with God every day.
+    </p>
+  </div>
+</section>
+
+<!-- TODAY'S DEVOTIONAL -->
+<section class="section">
+  <div class="container fade-up">
+
+    <div class="devotional-card featured">
+      <span class="devotional-date">Today • Loading…</span>
+
+      <h2 class="devotional-title">
+        Waiting on the Lord
+      </h2>
+
+      <blockquote class="devotional-scripture">
+        “But they that wait upon the LORD shall renew their strength…”
+        <span>— Isaiah 40:31</span>
+      </blockquote>
+
+      <p class="devotional-body">
+        Sometimes God works most powerfully in silence.  
+        When answers delay, faith deepens. Waiting is not wasted time;
+        it is preparation for strength beyond your own.
+      </p>
+
+      <div class="devotional-footer">
+        <span class="author">TMC Ministry</span>
+
+        <div class="devotional-actions">
+      <button class="action-btn" onclick="shareOnWhatsApp()">📤 Share</button>
+      <button class="action-btn" onclick="copyScripture()">📋 Copy Scripture</button>
+
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- PREVIOUS DEVOTIONALS -->
+<span class="devotional-date" id="devotional-date"></span>
+
+<h2 class="devotional-title" id="devotional-title"></h2>
+
+<blockquote class="devotional-scripture" id="devotional-scripture">
+  <span id="devotional-scripture-ref"></span>
+</blockquote>
+
+<p class="devotional-body" id="devotional-body"></p>
+
+<span class="author" id="devotional-author"></span>
+
+<div class="devotional-list" id="previous-devotionals"></div>
+
+<footer>
+  <div class="footer-container">
+
+    <!-- Logo & Description -->
+    <div class="footer-brand">
+      <div class="logo">TMC</div>
+      <p>Inspiring worship, devotionals, and creative faith content for believers everywhere.</p>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="index.html">Home</a>
+      <a href="devotionals.html">Devotionals</a>
+      <a href="music.html">Music</a>
+      <a href="videos.html">Videos</a>
+      <a href="about.html">About</a>
+      <a href="join.html">Join</a>
+    </div>
+
+    <!-- Contact & Socials -->
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <a href="https://wa.me/+256774313810" target="_blank">WhatsApp</a>
+      <a href="mailto:YOUR_EMAIL@example.com">Email</a>
+      <div class="socials">
+        <a href="https://www.facebook.com/YOUR_PAGE" target="_blank">Facebook</a>
+        <a href="https://www.instagram.com/YOUR_PAGE" target="_blank">Instagram</a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Copyright -->
+  <div class="footer-bottom">
+    <p>&copy; 2025 TMC. All Rights Reserved.</p>
+  </div>
+</footer>
+<!-- SHARED JS -->
+<script src="shared.js"></script>
+<!-- DEVOTIONAL JS (empty for now) -->
+<script src="devotional.js"></script>
+
+</body>
+</html>

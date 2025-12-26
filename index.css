@@ -1,0 +1,143 @@
+/* =========================================================
+   TMC – HOME PAGE STYLES
+   Hero • Cards • Sections • Polish
+   ========================================================= */
+
+/* -------------------------
+   HERO SECTION
+-------------------------- */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 80px; /* space for fixed header */
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(212, 175, 55, 0.08),
+      transparent 60%
+    );
+  pointer-events: none;
+}
+
+.hero h1 {
+  max-width: 900px;
+  margin: auto;
+}
+
+.hero p {
+  font-size: 1.05rem;
+}
+
+/* -------------------------
+   MUSIC PREVIEW CARDS
+-------------------------- */
+.music-card {
+  padding: 2rem;
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.04),
+    rgba(255, 255, 255, 0.01)
+  );
+  border: 1px solid var(--border-soft);
+  border-radius: 16px;
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.music-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(212, 175, 55, 0.15),
+    transparent 60%
+  );
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+
+.music-card:hover::before {
+  opacity: 1;
+}
+
+.music-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.music-card h4 {
+  margin-bottom: 0.6rem;
+}
+
+/* -------------------------
+   DEVOTIONAL SECTION
+-------------------------- */
+.section.deep .scripture {
+  background: linear-gradient(
+    180deg,
+    rgba(212, 175, 55, 0.1),
+    rgba(212, 175, 55, 0.02)
+  );
+  padding: 1.2rem 1.5rem;
+  border-radius: 12px;
+}
+
+/* -------------------------
+   VIDEO PREVIEW CARDS
+-------------------------- */
+.video-card {
+  padding: 2.5rem 2rem;
+  background: linear-gradient(
+    180deg,
+    rgba(74, 108, 255, 0.08),
+    rgba(74, 108, 255, 0.02)
+  );
+  border: 1px solid var(--border-soft);
+  border-radius: 16px;
+  text-align: center;
+  transition: all 0.35s ease;
+}
+
+.video-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.45);
+}
+
+.video-card h4 {
+  margin: 0;
+}
+
+/* -------------------------
+   JOIN SECTION BUTTONS
+-------------------------- */
+.section.deep .btn {
+  min-width: 180px;
+}
+
+/* -------------------------
+   RESPONSIVE REFINEMENTS
+-------------------------- */
+@media (max-width: 768px) {
+  .hero {
+    text-align: center;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
